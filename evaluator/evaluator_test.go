@@ -214,6 +214,10 @@ if (10 > 1) {
 			`"Hello" - "World"`,
 			"unknown operator: STRING - STRING",
 		},
+		{
+			`{"name": "Monkey"}[fn(x){x}];`,
+			"unusable as hash key:FUNCTION",
+		},
 	}
 
 	for _, tt := range tests {
